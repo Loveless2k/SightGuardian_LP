@@ -520,7 +520,7 @@ export default function Home() {
             >
               {/* Feature 1 */}
               <motion.div
-                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10"
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10 flex flex-col h-full"
                 variants={staggerItemVariants}
                 whileHover={{
                   scale: 1.02,
@@ -556,13 +556,13 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Filtro de Luz Azul Adaptativo
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-gray-600 leading-relaxed mb-4 flex-grow">
                   Ajusta automáticamente la intensidad del filtro según la hora
                   del día y el contenido visualizado, reduciendo la fatiga
                   ocular sin afectar la experiencia visual.
                 </p>
                 <motion.div
-                  className="flex items-center text-brand-blue font-semibold"
+                  className="flex items-center text-brand-blue font-semibold mt-auto"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -585,7 +585,7 @@ export default function Home() {
 
               {/* Feature 2 */}
               <motion.div
-                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10"
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10 flex flex-col h-full"
                 variants={staggerItemVariants}
                 whileHover={{
                   scale: 1.02,
@@ -615,13 +615,13 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Análisis de Patrones de Uso
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-gray-600 leading-relaxed mb-4 flex-grow">
                   Monitorea los hábitos de uso y proporciona insights valiosos
                   sobre el tiempo de pantalla, ayudando a establecer rutinas
                   saludables para tus hijos.
                 </p>
                 <motion.div
-                  className="flex items-center text-brand-green font-semibold"
+                  className="flex items-center text-brand-green font-semibold mt-auto"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
@@ -644,7 +644,7 @@ export default function Home() {
 
               {/* Feature 3 */}
               <motion.div
-                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10"
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10 flex flex-col h-full"
                 variants={staggerItemVariants}
                 whileHover={{
                   scale: 1.02,
@@ -692,14 +692,14 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
                   Ejercicio Visual Inteligente
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-4">
+                <p className="text-gray-600 leading-relaxed mb-4 flex-grow">
                   Distorsión controlada de la imagen que se ajusta
                   automáticamente en función del tiempo de uso, incentivando al
                   usuario a ejercitar la vista mediante movimientos naturales de
                   acercamiento y alejamiento del dispositivo.
                 </p>
                 <motion.div
-                  className="flex items-center text-accent-purple font-semibold"
+                  className="flex items-center text-accent-purple font-semibold mt-auto"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
