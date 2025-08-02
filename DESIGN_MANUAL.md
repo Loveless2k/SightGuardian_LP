@@ -2,7 +2,7 @@
 
 ## 🎨 Design System Overview
 
-This manual documents the complete design system for the SightGuardian AI landing page, including all visual improvements implemented through Phase 1 and Phase 2 development.
+This manual documents the complete design system for the SightGuardian AI landing page, including all visual improvements and advanced animations implemented through Phase 1, Phase 2, and Phase 3 development.
 
 ### Design Philosophy
 
@@ -295,7 +295,81 @@ background-image: radial-gradient(
 }
 ```
 
-## 🎬 Animation System
+## 🎬 Animation System (Phase 3)
+
+### Framer Motion Integration
+
+The landing page uses Framer Motion for sophisticated animations that enhance user experience while maintaining performance and accessibility.
+
+#### Animation Architecture
+
+```typescript
+// Core animation utilities
+import { motion, AnimatePresence } from "framer-motion";
+import { useReducedMotion } from "@/lib/hooks/useReducedMotion";
+import {
+  heroTitleVariants,
+  staggerContainerVariants,
+  fadeInUpVariants,
+} from "@/lib/animations";
+```
+
+#### Performance Optimization
+
+- **GPU Acceleration**: All animations use transform properties
+- **Viewport Optimization**: Animations trigger only when elements enter viewport
+- **Reduced Motion Support**: Automatic fallback for accessibility preferences
+- **Mobile Optimization**: Lighter animations on smaller screens
+
+### Animation Variants
+
+#### Hero Section Animations
+
+```typescript
+// Staggered hero content reveal
+export const heroTitleVariants: Variants = {
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.8, ease: [0.4, 0, 0.2, 1], delay: 0.2 },
+  },
+};
+
+// Subtitle with delayed entrance
+export const heroSubtitleVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1], delay: 0.5 },
+  },
+};
+```
+
+#### Trust Indicators Animations
+
+```typescript
+// Advanced hover effects with rotation and scale
+whileHover={{
+  scale: 1.1,
+  rotate: 3,
+  boxShadow: "0 25px 50px -12px rgba(37, 99, 235, 0.4)",
+  transition: { duration: 0.3 }
+}}
+```
+
+#### Scroll-Triggered Animations
+
+```typescript
+// Viewport-based animation triggers
+const viewportOptions = {
+  once: true,
+  margin: "-100px 0px",
+  amount: 0.3,
+} as const;
+```
 
 ### Transition Standards
 
