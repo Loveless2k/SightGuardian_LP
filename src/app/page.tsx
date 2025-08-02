@@ -512,7 +512,7 @@ export default function Home() {
             </motion.div>
 
             <motion.div
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto"
+              className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto"
               variants={staggerContainerVariants}
               initial="hidden"
               whileInView="visible"
@@ -626,6 +626,84 @@ export default function Home() {
                   transition={{ duration: 0.2 }}
                 >
                   <span>Insights detallados</span>
+                  <svg
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </motion.div>
+              </motion.div>
+
+              {/* Feature 3 */}
+              <motion.div
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10"
+                variants={staggerItemVariants}
+                whileHover={{
+                  scale: 1.02,
+                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+                  transition: { duration: 0.3 },
+                }}
+              >
+                <motion.div
+                  className="w-12 h-12 bg-gradient-to-br from-brand-green/20 to-brand-green/10 rounded-xl flex items-center justify-center mb-6"
+                  whileHover={{ rotate: 10, scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <svg
+                    className="w-6 h-6 text-brand-green"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M8 12h.01M12 12h.01M16 12h.01"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 16l3-3 3 3M17 8l-3 3-3-3"
+                    />
+                  </svg>
+                </motion.div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  Ejercicio Visual Inteligente
+                </h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Distorsión controlada de la imagen que se ajusta
+                  automáticamente en función del tiempo de uso, incentivando al
+                  usuario a ejercitar la vista mediante movimientos naturales de
+                  acercamiento y alejamiento del dispositivo.
+                </p>
+                <motion.div
+                  className="flex items-center text-brand-green font-semibold"
+                  whileHover={{ x: 5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <span>Ejercicio adaptativo</span>
                   <svg
                     className="w-4 h-4 ml-2"
                     fill="none"
