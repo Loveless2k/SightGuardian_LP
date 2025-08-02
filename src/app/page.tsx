@@ -21,7 +21,7 @@ export default function Home() {
     ? { duration: 0.2, ease: "easeOut" }
     : { duration: 0.5, ease: [0.4, 0, 0.2, 1] };
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 via-blue-100 to-emerald-100 relative overflow-hidden">
       {/* Background Pattern Overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-brand-blue/10 to-transparent rounded-full blur-3xl"></div>
@@ -39,7 +39,7 @@ export default function Home() {
           >
             {/* Hero Content Container */}
             <motion.div
-              className="bg-white/70 backdrop-blur-md rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl shadow-black/10 border border-white/30 relative overflow-hidden"
+              className="bg-white/90 backdrop-blur-md rounded-3xl p-8 sm:p-12 lg:p-16 shadow-2xl shadow-black/20 border border-white/50 relative overflow-hidden"
               variants={staggerItemVariants}
             >
               {/* Decorative Elements */}
@@ -76,7 +76,7 @@ export default function Home() {
                   </motion.span>
                   . <br className="hidden sm:block" />
                   <motion.span
-                    className="block mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-700"
+                    className="block mt-2 text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-gray-dark"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 1.5 }}
@@ -121,7 +121,7 @@ export default function Home() {
 
             {/* Trust Indicators */}
             <motion.div
-              className="mt-20 bg-white/60 backdrop-blur-md rounded-3xl p-10 sm:p-12 border border-white/40 shadow-xl shadow-black/5"
+              className="mt-20 bg-white/85 backdrop-blur-md rounded-3xl p-10 sm:p-12 border border-white/60 shadow-xl shadow-black/15"
               variants={fadeInUpVariants}
               initial="hidden"
               whileInView="visible"
@@ -450,7 +450,7 @@ export default function Home() {
 
         {/* Features Showcase Section */}
         <motion.section
-          className="py-24 bg-gradient-to-br from-blue-50/50 to-green-50/50 relative overflow-hidden"
+          className="py-24 bg-gradient-to-br from-brand-blue/5 via-slate-50 to-brand-green/5 relative overflow-hidden"
           variants={fadeInUpVariants}
           initial="hidden"
           whileInView="visible"
@@ -520,11 +520,11 @@ export default function Home() {
             >
               {/* Feature 1 */}
               <motion.div
-                className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/30 shadow-xl"
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10"
                 variants={staggerItemVariants}
                 whileHover={{
                   scale: 1.02,
-                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
+                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
                   transition: { duration: 0.3 },
                 }}
               >
@@ -585,11 +585,11 @@ export default function Home() {
 
               {/* Feature 2 */}
               <motion.div
-                className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/30 shadow-xl"
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 border border-white/60 shadow-xl shadow-black/10"
                 variants={staggerItemVariants}
                 whileHover={{
                   scale: 1.02,
-                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
+                  boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
                   transition: { duration: 0.3 },
                 }}
               >

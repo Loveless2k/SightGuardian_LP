@@ -49,19 +49,30 @@ const config: Config = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
-        // Brand colors as specified in the manual
+        // Enhanced brand colors for better contrast and visual hierarchy
         "brand-blue": {
           light: "#60A5FA",
           DEFAULT: "#2563EB",
-          dark: "#2563EB",
+          dark: "#1E40AF",
+          darker: "#1E3A8A",
         },
         "brand-green": {
-          light: "#34D399",
+          light: "#6EE7B7",
           DEFAULT: "#34D399",
+          dark: "#10B981",
+          darker: "#059669",
         },
         "brand-gray": {
+          light: "#9CA3AF",
           DEFAULT: "#6B7280",
-          dark: "#1F2937",
+          dark: "#374151",
+          darker: "#1F2937",
+        },
+        // New accent colors for enhanced visual hierarchy
+        "accent-purple": {
+          light: "#C4B5FD",
+          DEFAULT: "#8B5CF6",
+          dark: "#7C3AED",
         },
       },
       borderRadius: {
