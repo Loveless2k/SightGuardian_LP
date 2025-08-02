@@ -653,12 +653,12 @@ export default function Home() {
                 }}
               >
                 <motion.div
-                  className="w-12 h-12 bg-gradient-to-br from-brand-green/20 to-brand-green/10 rounded-xl flex items-center justify-center mb-6"
+                  className="w-12 h-12 bg-gradient-to-br from-accent-purple/20 to-accent-purple/10 rounded-xl flex items-center justify-center mb-6"
                   whileHover={{ rotate: 10, scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 >
                   <svg
-                    className="w-6 h-6 text-brand-green"
+                    className="w-6 h-6 text-accent-purple"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -699,7 +699,7 @@ export default function Home() {
                   acercamiento y alejamiento del dispositivo.
                 </p>
                 <motion.div
-                  className="flex items-center text-brand-green font-semibold"
+                  className="flex items-center text-accent-purple font-semibold"
                   whileHover={{ x: 5 }}
                   transition={{ duration: 0.2 }}
                 >
