@@ -72,7 +72,7 @@ export function EmailForm() {
           <Input
             {...register("email")}
             type="email"
-            placeholder="Tu mejor correo electrónico"
+            placeholder="Escribe tu correo electrónico"
             error={!!errors.email}
             errorMessage={errors.email?.message}
             disabled={isSubmitting}
