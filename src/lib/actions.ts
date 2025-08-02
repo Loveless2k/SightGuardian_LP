@@ -52,7 +52,13 @@ async function readExistingEmails(): Promise<string[]> {
     const fileContent = await fs.readFile(EMAIL_FILE_PATH, "utf-8");
     return fileContent
       .split("\n")
-      .map((email) => email.trim())
+      .map((line) => line.trim())
+      .filter((line) => line.length > 0)
+      .map((line) => {
+        // Extract email part before the timestamp (format: "email - timestamp")
+        const emailPart = line.split(" - ")[0];
+        return emailPart ? emailPart.toLowerCase() : "";
+      })
       .filter((email) => email.length > 0);
   } catch (error) {
     // If file doesn't exist or can't be read, return empty array
@@ -66,7 +72,8 @@ async function readExistingEmails(): Promise<string[]> {
  */
 async function emailExists(email: string): Promise<boolean> {
   const existingEmails = await readExistingEmails();
-  return existingEmails.includes(email.toLowerCase());
+  const normalizedEmail = email.toLowerCase();
+  return existingEmails.includes(normalizedEmail);
 }
 
 /**
